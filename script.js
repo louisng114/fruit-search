@@ -43,13 +43,13 @@ function useSuggestion(e) {
 	if (e.target.tagName === "LI") {
 		input.value = e.target.textContent;
 		suggestions.innerHTML = "";
-	} else if (e.target.parentElement.tagName === "LI") {
+	} else if (e.target.parentElement.tagName === "LI") {		// register clicks on letters with <b> tag
 		input.value = e.target.parentElement.textContent;
 		suggestions.innerHTML = "";
 	};
 };
 
-function toggleWingdings() {
+function toggleWingdings() {		// add whimsy
 	input.classList.toggle("wingdings-mode");
 	searchContainer.classList.toggle("wingdings-mode");
 	if (input.classList.contains("wingdings-mode")){
